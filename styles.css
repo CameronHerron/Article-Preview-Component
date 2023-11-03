@@ -14,7 +14,7 @@ body{
 }
 .img-box{
     width: 100%;
-    height: 13.3em;
+    height: 13.4em;
     overflow: hidden;
 }
 .main-img{
@@ -38,16 +38,34 @@ h1{
 .author{
     display: flex;
     align-items: center;
+    margin: 1em;
+}
+.author-info{
+    margin-left: .9em;
+}
+.author-info h2{
+    font-size: .9em;
+    margin-bottom: 0;
+    color: hsl(217, 19%, 35%);
+}
+.date{
+    margin-top: .2em;
+    font-size: .8em;
+    color: hsl(214, 17%, 51%);
 }
 .avatar{
     border-radius: 10em;
-    width: 4em;
-    height: 4em;
+    width: 3.1em;
+    height: 3.1em;
 }
 .share-button{
     background-color: hsl(210, 46%, 95%);
     width: 1em;
     height: 1em;
+    padding: .7em;
+    border-radius: 50%;
+    position: absolute;
+    right: 2.8em;
 }
 .share{
     background-color: hsl(217, 19%, 35%);
