@@ -16,6 +16,8 @@ body{
     width: 100%;
     height: 13.4em;
     overflow: hidden;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 }
 .main-img{
     width: 100%;
@@ -35,6 +37,11 @@ h1{
     font-size: .9em;
 }
 
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .author{
     display: flex;
     align-items: center;
@@ -64,8 +71,9 @@ h1{
     height: 1em;
     padding: .7em;
     border-radius: 50%;
-    position: absolute;
-    right: 2.8em;
+    margin-right: 1em;
+    /* position: absolute;
+    right: 2.8em; */
 }
 .share{
     background-color: hsl(217, 19%, 35%);
