@@ -45,7 +45,12 @@ h1{
 .author{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 1em;
+    width: 100%;
+}
+.left{
+    display: flex;
 }
 .author-info{
     margin-left: .9em;
@@ -64,18 +69,137 @@ h1{
     border-radius: 10em;
     width: 3.1em;
     height: 3.1em;
+    align-self: center;
 }
 .share-button{
     background-color: hsl(210, 46%, 95%);
-    width: 1em;
-    height: 1em;
+    width: 1.1em;
+    height: 1.1em;
     padding: .7em;
-    border-radius: 50%;
+    border-radius: 2em;
     margin-right: 1em;
-    /* position: absolute;
-    right: 2.8em; */
 }
 .share{
     background-color: hsl(217, 19%, 35%);
     display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.share-text, .tooltip-text{
+    text-transform: uppercase;
+    color: hsl(212, 23%, 69%);
+    font-size: .9em;
+    font-weight: 300;
+    letter-spacing: .4em;
+    margin-left: 1em;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+}
+.icon{
+    margin-left:.5em;
+    margin-right: .5em;
+}
+.fb:hover{
+    cursor: pointer;
+    filter: brightness(0) saturate(100%)
+            invert(43%) sepia(4%) saturate(5957%)
+            hue-rotate(182deg) brightness(92%) contrast(107%);
+}
+.twit:hover{
+    cursor: pointer;
+    filter: brightness(0) saturate(100%)
+            invert(53%) sepia(78%) saturate(1850%) 
+            hue-rotate(176deg) brightness(93%) contrast(104%);
+}
+.pin:hover{
+    cursor: pointer;
+    filter: brightness(0) saturate(100%)
+            invert(14%) sepia(65%) saturate(6490%) 
+            hue-rotate(345deg) brightness(88%) contrast(121%);
+}
+.desktop{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        display: flex;
+        height: 100vh;
+        align-items: center;
+    }
+    .card{
+        display: flex;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .img-box{
+        display: none;
+    }
+    .desktop{
+        display: flex;
+    }
+    .main-img{
+        width: 43%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1em;
+    }
+    .summary, h1, .left{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    
+    .summary{
+        font-size: 1em;
+        align-self: flex-start;
+    }
+    .bottom{
+        display: none;
+        align-self: flex-end;
+    }
+    .tooltip-container {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        padding-top: 1em;
+      }
+      
+      .tooltip-content {
+        visibility: hidden;
+        position: absolute;
+        background-color: hsl(217, 19%, 35%);
+        color: #fff;
+        border-radius: .6em;
+        padding: 10px;
+        bottom: 100%; /* Position the tooltip above the image */
+        left: 50%;
+        transform: translateX(-50%);
+        transition: visibility 0.3s, opacity 0.3s;
+        opacity: 0;
+        pointer-events: none;
+        display: flex;
+      }
+      
+      .tooltip-container:hover .tooltip-content {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      
+      .tooltip-text {
+        font-size: 16px;
+      }
 }
